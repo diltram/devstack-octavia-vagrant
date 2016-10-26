@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 require "vagrant-reload"
-require "vagrant-openstack-plugin"
+require "vagrant-openstack-provider"
 
 Vagrant.configure(2) do |config|
 
@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
     os.openstack_auth_url     = ENV["OS_AUTH_URL"]
     os.username               = ENV["OS_USERNAME"]
     os.password               = ENV["OS_PASSWORD"]
-    os.tenant_name            = ENV["OS_PROJECT_NAME"]
+    os.tenant_name            = ENV["OS_TENANT_NAME"]
     os.openstack_network_url  = ENV["OS_NETWORK_URL"]
     os.openstack_image_url    = ENV["OS_IMAGE_URL"]
 
