@@ -29,8 +29,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "dilu-devstack-octavia-kvm" do |octavia|
     octavia.ssh.private_key_path = "~/.ssh/id_rsa"
-    octavia.ssh.proxy_command = "ssh -W %h:%p -q bastion"
-    octavia.ssh.forward_agent = true
     octavia.ssh.username = "ubuntu"
 
     octavia.vm.provision "shell", inline: "sudo apt-get -y install python-minimal"
