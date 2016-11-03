@@ -20,6 +20,8 @@ Vagrant.configure(2) do |config|
     os.networks               = ["dilu_mgmt"]
     os.keypair_name           = "dilu"
     os.security_groups        = ["default-cleared", "ssh", "mosh"]
+    # Uncomment to use Floating IP
+    # os.floating_ip_pool       = "GATEWAY_NET"
     os.volume_boot            = {
       image: "ubuntu-16.04-cloud",
       size: 50,
